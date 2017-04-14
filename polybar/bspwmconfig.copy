@@ -1,0 +1,935 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+;background = 9F16d0d0
+background = 89202020
+background-alt = 3916d0d0
+;background-alt = #444
+background-bt = 00000000
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #16d0d0
+brightprimary = #00FFFF
+secondary = #e60053
+lightred = #FF7777
+alertpink = #FF385C
+;lightalertpink = #FF5574
+lightalertpink = #E74E6A
+lightmagenta = #EC74FF
+lightorange = #FF9674
+darkorange = #FF8038
+neongreen = #00FF5F
+lightneongreen = #2FFF7C
+lightgreen = #90EE90
+alert = #bd2c40
+
+[modules/xmenu]
+menu-0 = item 1;command
+menu-0-0 = sub-item 1.1;command
+menu-0-1 = sub-item 1.2;command
+menu-0-2 = sub-item 1.3;command
+menu-1 = item 2;command
+menu-1-0 = sub-item 2.1;command
+menu-1-1 = sub-item 2.2;command
+
+;;;;;;;;;;;;;;;
+;;;;;;Top;;;;;;
+;;;;;;;;;;;;;;;
+
+[bar/top]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 80%
+height = 27
+offset-x = 10%
+;offset-y = 12
+offset-y = 1%
+radius = 0
+fixed-center = true
+bottom = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 1
+border-color = ${colors.primary}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = FontAwesome:size=10;2
+font-1 = Courier Prime:size=12;3
+;font- = fixed:pixelsize=11;1
+font-2 = Courier Prime:size=14;3
+font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-4 = siji:pixelsize=10;1
+
+modules-left = space wlan globe eth sep updown sep
+modules-center = date sep time
+modules-right = sep volume sep update sep powermenu
+
+tray-position = right
+tray-padding = 2
+tray-transparent = true
+tray-background = #2b2b2b
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+;;;;;;;;;;;;;;;;;;
+;;;;;;Bottom;;;;;;
+;;;;;;;;;;;;;;;;;;
+
+[bar/bottom]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 6%
+height = 27
+offset-x = 47%
+offset-y = 0%
+radius = 0
+fixed-center = true
+bottom = true
+
+background = ${colors.background-bt}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0 
+border-color = #16d0d0
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FontAwesome:size=10;2
+font-1 = Courier Prime:size=12;3
+;font-1 = fixed:pixelsize=11;1
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = siji:pixelsize=10;1
+
+modules-left = 
+modules-center = pre-bspwm bspwm post-bspwm 
+modules-right = 
+
+tray-position = right
+tray-padding = 0
+tray-transparent = true
+tray-background = #2b2b2b
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;Bottom Right;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bottomright]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 25%
+height = 27
+offset-x = 75%
+offset-y = 0%
+radius = 0
+fixed-center = true
+bottom = true
+
+background = ${colors.background-bt}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0 
+border-color = #16d0d0
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FontAwesome:size=13;2
+font-1 = Courier Prime:size=12;3
+;font-1 = fixed:pixelsize=11;1
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = siji:pixelsize=10;1
+
+modules-left = 
+modules-center = memory cpu space temperature
+modules-right = 
+
+tray-position = right
+tray-padding = 0
+tray-transparent = true
+tray-background = #2b2b2b
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+
+;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;Bottom Left;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bottomleft]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 25%
+height = 27
+offset-x = 0%
+offset-y = 0%
+radius = 0
+fixed-center = true
+bottom = true
+
+background = ${colors.background-bt}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0 
+border-color = #16d0d0
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = FontAwesome:size=13;2
+font-1 = Courier Prime:size=12;3
+;font- = fixed:pixelsize=11;1
+font-2 = Courier Prime:size=14;3
+font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-4 = siji:pixelsize=10;1
+
+modules-left = space fileroot sep filehome
+modules-center =
+modules-right = 
+
+tray-position = right
+tray-padding = 0
+tray-transparent = true
+tray-background = #2b2b2b
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;bottommiddleright;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bottommiddleright]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 25%
+height = 27
+offset-x = 52%
+offset-y = 0%
+radius = 0
+fixed-center = true
+bottom = true
+
+background = ${colors.background-bt}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0 
+border-color = #16d0d0
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = FontAwesome:size=13;2
+font-1 = Courier Prime:size=12;3
+;font-1 = fixed:pixelsize=11;1
+font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-3 = siji:pixelsize=10;1
+
+modules-left = 
+modules-center = music
+modules-right = 
+
+tray-position = right
+tray-padding = 0
+tray-transparent = true
+tray-background = #2b2b2b
+
+wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+;;;;;;;;;;;;;;;;;;;
+;;;;;;Modules;;;;;;
+;;;;;;;;;;;;;;;;;;;
+
+[module/space]
+type = custom/text
+content = " "
+
+content-foreground = #FF6666
+
+click = bspwm-deskprev
+
+[module/sep]
+type = custom/text
+content = %{T3}|%{T-}
+
+content-foreground = ${colors.primary}
+content-font = 3
+
+[module/update]
+type = custom/script
+interval = 1200
+format = <label>
+label = "%output:0:30%"
+exec = .config/polybar/pkg.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:/%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/fileroot]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+label-mounted = %mountpoint%: %free%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt} 
+
+[module/filehome]
+type = internal/fs
+interval = 25
+
+mount-0 = /home
+
+;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+label-mounted = %mountpoint%: %free%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt} 
+
+;[module/battery]
+;type = internal/battery
+;battery = BAT0
+;adapter = ADP1
+;full-at = 98
+
+;format-charging = <animation-charging> <label-charging>
+;format-charging-underline = #ffb52a
+
+;format-discharging = <ramp-capacity> <label-discharging>
+;format-discharging-underline = ${self.format-charging-underline}
+
+;format-full-prefix = " "
+;format-full-prefix-foreground = ${colors.foreground-alt}
+;format-full-underline = ${self.format-charging-underline}
+
+;ramp-capacity-0 = 
+;ramp-capacity-1 = 
+;ramp-capacity-2 = 
+;ramp-capacity-foreground = ${colors.foreground-alt}
+
+;animation-charging-0 = 
+;animation-charging-1 = 
+;animation-charging-2 = 
+;animation-charging-foreground = ${colors.foreground-alt}
+;animation-charging-framerate = 750
+
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;BSPWM MODULE;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/pre-bspwm]
+type = custom/text
+content = >>>
+;content = ⋙
+
+
+;content-foreground = #FF6666
+content-foreground = ${colors.lightalertpink}
+
+click-left = bspc desktop -f prev
+
+[module/post-bspwm]
+type = custom/text
+content = <<<
+;content = ⋘
+
+;content-foreground = #FF6666
+content-foreground = ${colors.lightalertpink}
+
+click-left = bspc desktop -f next
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %name%
+label-focused-foreground = ${colors.brightprimary}
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
+label-focused-padding = 0
+
+label-occupied = 
+;label-occupied-padding = 2
+
+label-urgent = 
+;label-urgent-background = ${colors.alert}
+;label-urgent-padding = 2
+
+label-empty = 
+;label-empty-foreground = ${colors.foreground-alt}
+;label-empty-padding = 2
+
+
+[module/bspwm2]
+type = internal/bspwm
+
+ws-icon-0 = term;
+ws-icon-1 = web;
+ws-icon-2 = code;
+ws-icon-3 = music;
+ws-icon-4 = irssi;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+;label-dimmed-underline = ${background}
+
+label-focused = %icon%
+label-focused-foreground = #fff
+label-focused-background = #773f3f3f
+;label-focused-underline = #ffffff
+label-focused-font = 4
+label-focused-padding = 4
+
+label-occupied = %icon%
+label-occupied-foreground = #dd
+;label-occupied-underline = #f7ed91
+label-occupied-font = 4
+label-occupied-padding = 4
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+;label-urgent-underline = #9b0a20
+label-urgent-font = 4
+label-urgent-padding = 4
+
+label-empty = %icon%
+label-empty-foreground = #55
+label-empty-font = 4
+label-empty-padding = 4
+
+;label-monocle = 
+;label-monocle-underline = ${module/bspwm.label-focused-underline}
+;label-monocle-background = #33ffffff
+;;;;;;label-monocle-padding = 2
+;;;
+label-locked = 
+label-locked-foreground = #bd2c40
+;label-locked-underline = ${module/bspwm.label-monocle-underline}
+label-locked-padding = ${module/bspwm.label-monocle-padding}
+
+label-sticky = 
+label-sticky-foreground = #fba922
+;label-sticky-underline = ${module/bspwm.label-monocle-underline}
+label-sticky-padding = ${module/bspwm.label-monocle-padding}
+
+label-private = 
+label-private-foreground = #bd2c40
+;label-private-underline = ${module/bspwm.label-monocle-underline}
+label-private-padding = ${module/bspwm.label-monocle-padding}
+
+;[module/bspwm]
+;type = internal/bspwm
+
+;label-focused = %index%
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
+;label-focused-padding = 2
+
+;label-occupied = %index%
+;label-occupied-padding = 2
+
+;label-urgent = %index%!
+;label-urgent-background = ${colors.alert}
+;label-urgent-padding = 2
+
+;label-empty = %index%
+;label-empty-foreground = ${colors.foreground-alt}
+;label-empty-padding = 2
+[
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused = F %index%
+label-focused-background = ${module/bspwm.label-focused-background}
+label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-padding = ${module/bspwm.label-focused-padding}
+
+label-unfocused = U %index%
+label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+
+label-visible = V %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-background}
+label-visible-padding = ${self.label-focused-padding}
+
+label-urgent = %index%!
+label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-padding = ${module/bspwm.label-urgent-padding}
+
+;;;;;;;;;;;;;;;;;;;;;
+;;;;;;CPU & Mem;;;;;;
+;;;;;;;;;;;;;;;;;;;;;
+
+;[module/cpu]
+;type = internal/cpu
+;interval = 2
+;format-prefix = " "
+;format-prefix-foreground = ${colors.foreground}
+;format-underline = #f90000
+;label = %percentage%%
+
+;[module/memory]
+;type = internal/memory
+;interval = 2
+;format-prefix = " "
+;format-prefix-foreground = ${colors.foreground}
+;format-underline = #4bffdc
+;label = %percentage_used%%
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = " "
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+;ramp-coreload-0-foreground = #aaff77
+ramp-coreload-0-foreground = ${colors.brightprimary}
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+;ramp-coreload-1-foreground = #aaff77
+ramp-coreload-1-foreground = ${colors.brightprimary}
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+;ramp-coreload-2-foreground = #aaff77
+ramp-coreload-2-foreground = ${colors.brightprimary}
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+;ramp-coreload-3-foreground = #aaff77
+ramp-coreload-3-foreground = ${colors.brightprimary}
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+;ramp-coreload-4-foreground = #fba922
+ramp-coreload-4-foreground = ${colors.lightorange}
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+;ramp-coreload-5-foreground = #fba922
+ramp-coreload-5-foreground = ${colors.lightorange}
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+;ramp-coreload-6-foreground = #ff5555
+ramp-coreload-6-foreground = ${colors.alertpink}
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+;ramp-coreload-7-foreground = #ff5555
+ramp-coreload-7-foreground = ${colors.alertpink}
+
+[module/memory]
+type = internal/memory
+format = <label> <bar-used>
+label = " "
+
+bar-used-width = 30
+;bar-used-foreground-0 = #aaff77
+;bar-used-foreground-1 = #aaff77
+bar-used-foreground-0 = ${colors.brightprimary}
+bar-used-foreground-1 = ${colors.brightprimary}
+;bar-used-foreground-2 = #fba922
+bar-used-foreground-2 = ${colors.lightorange}
+;bar-used-foreground-3 = #ff5555
+bar-used-foreground-3 = ${colors.alertpink}
+bar-used-indicator = |
+bar-used-indicator-font = 6
+bar-used-indicator-foreground = ${colors.primary}
+bar-used-fill = ─
+bar-used-fill-font = 6
+bar-used-empty = ─
+bar-used-empty-font = 6
+bar-used-empty-foreground = #444444
+
+;;;;;;;;;;;;;;;;;;;;
+;;;;;;Internet;;;;;;
+;;;;;;;;;;;;;;;;;;;;
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
+label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = enp4s0
+interval = 3.0
+
+;format-connected-underline = #55aa55
+;format-connected-prefix = "  "
+;format-connected-prefix-foreground = ${colors.foreground}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/updown]
+type = internal/network
+interface = enp4s0
+interval = 2
+
+label-connected = %upspeed% %{F#16D0D0}%{F-} %downspeed%
+
+[module/globe]
+type = custom/text
+
+content = ""
+content-foreground = ${colors.primary}
+
+;;;;;;;;;;;;;;;;;;;;;
+;;;;;;Time/Date;;;;;;
+;;;;;;;;;;;;;;;;;;;;;
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = "  %y/%m/%d"
+;date-alt = " %Y-%m-%d"
+
+;time = "  %H:%M:%S"
+;time-alt = %H:%M:%S
+
+;format-prefix = 
+;format-prefix-foreground = ${colors.foreground-alt}
+;format-underline = #0a6cf5
+
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 1
+
+time = "  %H:%M:%S"
+
+label = %time%
+
+;;;;;;;;;;;;;;;;;
+;;;;;;Sound;;;;;;
+;;;;;;;;;;;;;;;;;
+
+;[module/volume]
+;type = internal/volume
+
+;format-volume = <label-volume> <bar-volume>
+;label-volume = VOL
+;label-volume-foreground = ${root.foreground}
+
+;format-muted-prefix = " "
+;format-muted-foreground = ${colors.foreground-alt}
+;label-muted = sound muted
+
+;bar-volume-width = 10
+;bar-volume-foreground-0 = #55aa55
+;bar-volume-foreground-1 = #55aa55
+;bar-volume-foreground-2 = #55aa55
+;bar-volume-foreground-3 = #55aa55
+;bar-volume-foreground-4 = #55aa55
+;bar-volume-foreground-5 = #f5a70a
+;bar-volume-foreground-6 = #ff5555
+;bar-volume-foreground-7 = #ff55ff
+;bar-volume-gradient = false
+;bar-volume-indicator = |
+;bar-volume-indicator-font = 2
+;bar-volume-fill = ─
+;bar-volume-fill-font = 2
+;bar-volume-empty = ─
+;bar-volume-empty-font = 2
+;bar-volume-empty-foreground = ${colors.foreground-alt}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume>  <label-volume>
+format-muted = <label-muted>
+label-volume = %percentage%
+label-muted =   muted
+label-muted-foreground = #aaa
+;format-volume-padding = 3
+;format-muted-padding = 3
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-headphones-0 = 
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/music]
+type = custom/script
+interval = 1
+;tail = true
+
+label = %output%
+exec = ~/.config/polybar/mpris.sh
+
+click-left = playerctl previous
+click-middle = playerctl play-pause
+click-right = playerctl next
+
+scroll-up = playerctl position +
+scroll-down = playerctl position -
+
+;;;;;;;;;;;;;;;;
+;;;;;;Temp;;;;;;
+;;;;;;;;;;;;;;;;
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+;format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+;format-warn-underline = ${self.format-underline}
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.lightalertpink}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.foreground}
+;ramp-4-foreground = ${colors.secondary}
+
+;;;;;;;;;;;;;;;;;
+;;;;;;Power;;;;;;
+;;;;;;;;;;;;;;;;;
+
+[module/powermenu]
+type = custom/menu
+
+label-open = "  " 
+label-close = cancel
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-2 = suspend
+menu-0-2-exec = menu-open-3
+menu-0-0-padding = 1
+menu-0-1-padding = 1
+menu-0-2-padding = 1
+
+menu-1-0 = reboot?  
+menu-1-0-exec = sudo reboot
+menu-1-0-padding = 1
+
+menu-2-0 = power off?  
+menu-2-0-exec = sudo poweroff
+menu-2-0-padding = 1
+
+menu-3-0 = suspend?
+menu-3-0-exec = systemctl suspend
+menu-3-0-padding = 1
+
+label-open-foreground = ${colors.lightalertpink}
+label-close-foreground = ${colors.foreground-alt}
+
+;format-spacing = 1
+
+;label-open = 
+;label-open = 
+;label-open-foreground = ${colors.secondary}
+;label-close =  cancel
+;label-close-foreground = ${colors.secondary}
+;label-separator = |
+;label-separator-foreground = ${colors.foreground-alt}
+
+;menu-0-0 = reboot
+;menu-0-0-exec = menu-open-1
+;menu-0-1 = power off
+;menu-0-1-exec = menu-open-2
+
+;menu-1-0 = cancel
+;menu-1-0-exec = menu-open-0
+;menu-1-1 = reboot
+;menu-1-1-exec = sudo reboot
+
+;menu-2-0 = power off
+;menu-2-0-exec = sudo poweroff
+;menu-2-1 = cancel
+;menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

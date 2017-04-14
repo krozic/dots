@@ -1,0 +1,10 @@
+!keycode 77 = Num_Lock NoSymbol Num_Lock
+!clear lock
+!keycode 77 = Num_Lock NoSymbol Num_Lock
+!clear mod2
+!clear control
+!add control = Caps_Lock Control_L Control_R
+!keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+!keycode 77 = Num_Lock NoSymbol Num_Lock
+keycode 44 = j J down J
+keycode 37 = ISO_Level3 ISO_Level3 ISO_Level3

@@ -1,0 +1,58 @@
+" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
+" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
+" you can find below.  If you wish to change any of those settings, you should
+" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
+" everytime an upgrade of the vim packages is performed.  It is recommended to
+" make changes after sourcing archlinux.vim since it alters the value of the
+" 'compatible' option.
+
+" This line should not be removed as it ensures that various options are
+" properly set to work with the Vim-related packages.
+runtime! archlinux.vim
+"runtime! home/krozic/.vimrc
+" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
+" Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
+" and configure vim to your own liking!
+
+" do not load defaults if ~/.vimrc is missing
+"let skip_defaults_vim=1
+
+
+
+""""""""""""""""""""""""""""""""""
+"     ~~~~~~~~~~~~~~~~~~~~~~     ""
+"           Vim Config           ""
+"     ~~~~~~~~~~~~~~~~~~~~~~     ""
+"""""""""""""""""""""""""""""""""""               
+ """"""""""""""""""""""""""""""""""
+
+
+set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
+filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
+set t_Co=256              " enable 256-color mode.
+syntax enable             " enable syntax highlighting (previously syntax on).
+"colorscheme desert       " set colorscheme
+set number                " show line numbers
+set laststatus=2          " last window always has a statusline
+filetype indent on        " activates indenting for files
+set nohlsearch            " Don't continue to highlight searched phrases.
+set incsearch             " But do highlight as you type your search.
+set ignorecase            " Make searches case-insensitive.
+set ruler                 " Always show info along bottom.
+set autoindent            " auto-indent
+set tabstop=4             " tab spacing
+set softtabstop=4         " unify
+set shiftwidth=4          " indent/outdent by 4 columns
+set shiftround            " always indent/outdent to the nearest tabstop
+set expandtab             " use spaces instead of tabs
+set smarttab              " use tabs at the start of a line, spaces elsewhere
+"set nowrap               " don't wrap text
+"set statusline+=%f%=%l:%c%(   %)%p%%        " dir title
+"set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
+set statusline=[%n]
+set statusline+=\ %<%f\ \ \ 
+set statusline+=%m%Y\ <%{&ff}>\ \ \ \ \ 
+set statusline+=%R%H%W
+set statusline+=%=\ %p%%\ \ \ ln:%l/%L\ col:%c\ 
+set title                 " set title
+
