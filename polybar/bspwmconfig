@@ -208,7 +208,6 @@ scroll-down = bspwm-deskprev
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;Bottom Left;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;
@@ -416,7 +415,6 @@ label-unmounted-foreground = ${colors.foreground-alt}
 ;animation-charging-foreground = ${colors.foreground-alt}
 ;animation-charging-framerate = 750
 
-
 [module/xbacklight]
 type = internal/xbacklight
 
@@ -483,7 +481,6 @@ label-urgent =
 label-empty = 
 ;label-empty-foreground = ${colors.foreground-alt}
 ;label-empty-padding = 2
-
 
 [module/bspwm2]
 type = internal/bspwm
@@ -562,7 +559,7 @@ label-private-padding = ${module/bspwm.label-monocle-padding}
 ;label-empty = %index%
 ;label-empty-foreground = ${colors.foreground-alt}
 ;label-empty-padding = 2
-[
+
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
@@ -787,8 +784,6 @@ label = %time%
 ;bar-volume-empty = ─
 ;bar-volume-empty-font = 2
 ;bar-volume-empty-foreground = ${colors.foreground-alt}
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/volume]
 type = internal/volume

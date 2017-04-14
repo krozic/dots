@@ -37,7 +37,7 @@ bspc rule -a qalculate-gtk state=floating &
 
 
 #Bar set
-/home/krozic/.config/polybar/polybar.sh &
+/home/krozic/scripts/polybar.sh &
 
 # Wallpaper set
 feh --bg-fill /home/krozic/Pictures/Wallpapers/outrun.jpg &

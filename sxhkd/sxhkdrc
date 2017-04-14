@@ -140,22 +140,22 @@ super + {Left,Down,Up,Right}
 
 # top/bottom
 super + alt + shift + {Down,Up}
-    {tbincrease.py, tbdecrease.py}	
+    {~/scripts/tbincrease.py, ~/scripts/tbdecrease.py}	
 
 # left/right
 super + alt + shift + {Left,Right}
-    {lrincrease.py, lrdecrease.py}
+    {~/scripts/lrincrease.py, ~/scripts/lrdecrease.py}
 
 # reset
 super + alt + shift + Escape
-    paddingreset.py
+    ~/scripts/paddingreset.py
 
 # Change window_gap
 super + alt + {0,1,2}
 	bspc config window_gap {0, 12, 17} 
 
 super + alt + {Up,Down}
-    {gapup.py, gapdown.py}
+    {~/scripts/gapup.py, ~/scripts/gapdown.py}
     
 
 #######################

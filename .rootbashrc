@@ -7,6 +7,8 @@
 
 export PANEL_FIFO="/tmp/panel-fifo"
 PATH=$PATH:/home/krozic/.config/panel
+export PATH=$PATH:/home/krozic/scripts
+PATH=$PATH:/home/krozic/scripts
 
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
