@@ -26,14 +26,19 @@ bspc config focus_follows_pointer true &
 bspc config click_to_focus true &
 #bspc config pointer_follows_focus true &
 
+# For rules, call name by className
+# this can be found with eg:
+    # $ bspc query -T -d IV
+
 bspc rule -a Gimp desktop='^8' state=floating follow=on &
 #bspc rule -a Chromium desktop='^2' &
 bspc rule -a mplayer2 state=floating &
 bspc rule -a Kupfer.py focus=on &
 bspc rule -a Screenkey manage=off &
 #bspc rule -a xfce4-terminal --drop-down=floating &
-bspc rule -a Qalculate! state=floating &
-bspc rule -a qalculate-gtk state=floating &
+#bspc rule -a Qalculate! state=floating &
+bspc rule -a Qalculate-gtk state=floating &
+bspc rule -a Emacs state=tiled &
 
 
 #Bar set

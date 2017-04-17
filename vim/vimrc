@@ -47,8 +47,7 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 "set nowrap               " don't wrap text
-"set statusline+=%f%=%l:%c%(   %)%p%%        " dir title
-"set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ ascii:%b\ %P
+
 set statusline=[%n]
 set statusline+=\ %<%f\ \ \ 
 set statusline+=%m%Y\ <%{&ff}>\ \ \ \ \ 
